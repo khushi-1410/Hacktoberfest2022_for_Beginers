@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// function for Binary Addition
+int addition(int a, int b)
+{
+    int c; //carry
+    while (b != 0) {
+        //find carry and shift it left
+        c = (a & b) << 1;
+        //find the sum
+        a = a ^ b;
+        b = c;
+    }
+    return a;
+}
+
+int main()
+{
+    int num1, num2, Add;
+
+    printf("Input first integer value: ");
+    scanf("%d", &num1);
+
+    printf("Input second integer value: ");
+    scanf("%d", &num2);
+
+    Add = binAddition(num1, num2);
+
+    printf("Binary Addition: %d\n", binAdd);
+     return 0;
+}
